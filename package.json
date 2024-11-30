@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8",
     "@reduxjs/toolkit": "^2.4.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -62,6 +63,7 @@
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@stylistic/eslint-plugin": "^2.11.0",
+    "@types/google.maps": "^3.58.1",
     "@types/lodash": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",
