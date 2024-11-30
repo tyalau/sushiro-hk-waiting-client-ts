@@ -12,16 +12,16 @@ export const storeMapSlice = createSlice({
   name: 'storeMap',
   initialState,
   reducers: {
-    setStoreId: (state, action: PayloadAction<number | null>) => {
+    setStoreId: (state: StoreMapState, action: PayloadAction<number | null>) => {
       state.storeId = action.payload
     },
-    setShowInfo: (state, action: PayloadAction<boolean>) => {
+    setShowInfo: (state: StoreMapState, action: PayloadAction<boolean>) => {
       state.showInfo = action.payload
     },
-    setSelectedTiers: (state, action: PayloadAction<number[]>) => {
+    setSelectedTiers: (state: StoreMapState, action: PayloadAction<number[]>) => {
       state.selectedTiers = action.payload
     },
-    setResetTimer: (state, action: PayloadAction<boolean>) => {
+    setResetTimer: (state: StoreMapState, action: PayloadAction<boolean>) => {
       state.resetTimer = action.payload
     },
   },
