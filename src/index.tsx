@@ -8,9 +8,9 @@ import App from './App'
 // import Disclaimer from './pages/Disclaimer'
 // import ErrorBoundary from './pages/ErrorBoundary'
 import reportWebVitals from './reportWebVitals'
-// import { handleDOMChange } from './service/lang'
+import { handleDOMChange } from './service/lang'
 import store from './store'
-// import i18n from './i18n'
+import i18n from './i18n'
 import './assets/styles/index.scss'
 
 const Root = () => (
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 ])
 
 // handle index.html translation
-// handleDOMChange(i18n.language)
+handleDOMChange(i18n.language)
 
 const root = ReactDOM.createRoot(document.getElementById('root') as Container)
 root.render(
