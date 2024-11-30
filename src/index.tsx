@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM, { Container } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, Routes, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Provider } from 'react-redux'
 import App from './App'
-// import Disclaimer from './pages/Disclaimer'
-// import ErrorBoundary from './pages/ErrorBoundary'
+import Disclaimer from './pages/Disclaimer'
+import ErrorBoundary from './pages/ErrorBoundary'
 import reportWebVitals from './reportWebVitals'
 import { handleDOMChange } from './service/lang'
 import store from './store'
@@ -16,8 +16,8 @@ import './assets/styles/index.scss'
 const Root = () => (
   <Routes>
     <Route path="/" element={<App />} />
-    {/* <Route path="/disclaimer" element={<Disclaimer />} /> */}
-    {/* <Route path="/*" element={<Navigate to="/" replace />} /> */}
+    <Route path="/disclaimer" element={<Disclaimer />} />
+    <Route path="/*" element={<Navigate to="/" replace />} />
   </Routes>
 )
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   {
     path: '*',
     element: <Root />,
-    // errorElement: <ErrorBoundary />,
+    errorElement: <ErrorBoundary />,
   },
 ])
 
