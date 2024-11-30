@@ -16,10 +16,15 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": ">= 20.15"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint -c ./.eslintrc.js src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint -c ./.eslintrc.js src --ext .js,.jsx,.ts,.tsx --fix",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -44,6 +49,22 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
-    "husky": "^9.1.7"
+    "@stylistic/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1",
+    "prettier-plugin-sh": "^0.14.0"
+  },
+  "lint-staged": {
+    "./**/*": [
+      "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md,json}\""
+    ]
   }
 }
