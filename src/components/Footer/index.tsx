@@ -1,12 +1,11 @@
-import React from 'react'
 import { withTranslation, TFunction } from 'react-i18next'
 import { Stack, Container } from 'react-bootstrap'
 
-interface FooterProps {
+type FooterProps = {
   t: TFunction
 }
 
-const Footer: React.FC<FooterProps> = ({ t }) => (
+const Footer = ({ t }: FooterProps) => (
   <Stack
     as={Container}
     gap={2}

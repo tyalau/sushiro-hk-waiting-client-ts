@@ -1,4 +1,4 @@
-interface Store {
+type Store = {
   id: number
   name: string
   address: string
@@ -11,23 +11,23 @@ interface Store {
   localTicketing: boolean
 }
 
-interface StoreResponse {
+type StoreResponse = {
   data: Store[]
   timestamp: number
 }
 
-interface StoreMapState {
+type StoreMapState = {
   storeId: number | null
   showInfo: boolean
   selectedTiers: number[]
   resetTimer: boolean
 }
 
-interface StoreState {
+type StoreState = {
   storeMap: StoreMapState
 }
 
-interface Config {
+type Config = {
   languages: Array<string>
   refetchDuration: number
   apiTimeout: number

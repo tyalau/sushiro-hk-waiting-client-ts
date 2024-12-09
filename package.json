@@ -1,6 +1,6 @@
 {
   "name": "sushiro-hk-waiting-client-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
@@ -38,7 +38,9 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "eject": "react-scripts eject",
-    "prepare": "husky || true"
+    "prepare": "husky || true",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "browserslist": {
     "production": [
@@ -53,11 +55,20 @@
     ]
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/compat": "^1.2.3",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.16.0",
+    "@storybook/addon-essentials": "^8.4.6",
+    "@storybook/addon-interactions": "^8.4.6",
+    "@storybook/addon-onboarding": "^8.4.6",
+    "@storybook/blocks": "^8.4.6",
+    "@storybook/preset-create-react-app": "^8.4.6",
+    "@storybook/react": "^8.4.6",
+    "@storybook/react-webpack5": "^8.4.6",
+    "@storybook/test": "^8.4.6",
     "@stylistic/eslint-plugin": "^2.11.0",
     "@types/google.maps": "^3.58.1",
     "@types/jest": "^29.5.14",
@@ -69,15 +80,24 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-storybook": "^0.11.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
     "prettier-plugin-sh": "^0.14.0",
-    "sass": "^1.81.0"
+    "prop-types": "^15.8.1",
+    "sass": "^1.81.0",
+    "storybook": "^8.4.6",
+    "webpack": "^5.96.1"
   },
   "lint-staged": {
     "./**/*": [
       "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md,json}\""
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
     ]
   }
 }

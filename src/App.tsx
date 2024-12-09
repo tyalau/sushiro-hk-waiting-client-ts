@@ -1,4 +1,3 @@
-import React from 'react'
 import { Stack } from 'react-bootstrap'
 import NavigationBar from './containers/NavigationBar'
 import MapContainer from './containers/MapContainer'

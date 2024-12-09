@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import _ from 'lodash'
 import { withTranslation, TFunction } from 'react-i18next'
@@ -13,12 +12,12 @@ import Icon from '../../components/Icon'
 import { useGetStoreListQueryStateResult, useGetStoreListQuerySubscription } from '../../service/api/store'
 import { getDisplayTime } from '../../service/map'
 
-interface StoreInfoProps {
+type StoreInfoProps = {
   t: TFunction
   mobile?: boolean
 }
 
-const StoreInfo: React.FC<StoreInfoProps> = ({ t, mobile }) => {
+const StoreInfo = ({ t, mobile }: StoreInfoProps) => {
   const dispatch = useDispatch()
   const handleClose = () => {
     dispatch(setShowInfo(false))
