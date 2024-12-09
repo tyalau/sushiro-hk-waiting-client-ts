@@ -1,4 +1,3 @@
-import React from 'react'
 import { withTranslation, TFunction } from 'react-i18next'
 import { Stack, Container } from 'react-bootstrap'
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Container, Spinner, Button, Stack } from 'react-bootstrap'
 import { withTranslation, TFunction } from 'react-i18next'
 import { useSelector, useDispatch } from 'react-redux'

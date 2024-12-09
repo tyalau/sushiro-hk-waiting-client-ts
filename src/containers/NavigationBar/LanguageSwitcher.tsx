@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Nav from 'react-bootstrap/Nav'
 import { useGetStoreListQueryStateResult } from '../../service/api/store'

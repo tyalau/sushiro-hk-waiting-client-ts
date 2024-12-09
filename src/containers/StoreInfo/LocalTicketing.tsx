@@ -1,4 +1,3 @@
-import React from 'react'
 import { withTranslation, TFunction } from 'react-i18next'
 import Icon from '../../components/Icon'
 import { getFlagVariant } from '../../service/map'

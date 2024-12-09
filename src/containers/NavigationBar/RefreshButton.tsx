@@ -1,4 +1,3 @@
-import React from 'react'
 import { useDispatch } from 'react-redux'
 import Nav from 'react-bootstrap/Nav'
 import Icon from '../../components/Icon'

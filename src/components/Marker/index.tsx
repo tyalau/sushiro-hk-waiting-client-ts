@@ -1,4 +1,3 @@
-import React from 'react'
 import MapButton from '../MapButton'
 import Icon from '../Icon'
 import { getTierVariant } from '../../service/map'

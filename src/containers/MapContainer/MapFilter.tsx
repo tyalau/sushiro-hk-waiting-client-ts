@@ -1,4 +1,3 @@
-import React from 'react'
 import Stack from 'react-bootstrap/Stack'
 import { useSelector, useDispatch } from 'react-redux'
 import { withTranslation, TFunction } from 'react-i18next'

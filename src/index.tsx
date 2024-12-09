@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM, { Container } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
