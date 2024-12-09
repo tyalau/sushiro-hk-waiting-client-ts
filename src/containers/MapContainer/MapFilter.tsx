@@ -9,11 +9,11 @@ import { getTier, getTierVariant } from '../../service/map'
 import { useGetStoreListQueryStateResult } from '../../service/api/store'
 import MapButton from '../../components/MapButton'
 
-interface MapFilterProps {
+type MapFilterProps = {
   t: TFunction
 }
 
-const MapFilter: React.FC<MapFilterProps> = ({ t }) => {
+const MapFilter = ({ t }: MapFilterProps) => {
   const { selectedTiers } = useSelector((state: StoreState) => state.storeMap)
   const { data, isSuccess, status } = useGetStoreListQueryStateResult()
   const dispatch = useDispatch()

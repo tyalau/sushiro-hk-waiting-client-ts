@@ -3,13 +3,13 @@ import MapButton from '../MapButton'
 import Icon from '../Icon'
 import { getTierVariant } from '../../service/map'
 
-interface MarkerProps {
+type MarkerProps = {
   waitingGroup: number
   open: boolean
   localTicketing: boolean
 }
 
-const Marker: React.FC<MarkerProps> = ({ waitingGroup, open, localTicketing }) => {
+const Marker = ({ waitingGroup, open, localTicketing }: MarkerProps) => {
   let variant
   if (open) {
     variant = getTierVariant(waitingGroup)

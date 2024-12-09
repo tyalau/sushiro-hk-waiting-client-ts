@@ -3,12 +3,12 @@ import { withTranslation, TFunction } from 'react-i18next'
 import Icon from '../../components/Icon'
 import { getFlagVariant } from '../../service/map'
 
-interface StoreOpenProps {
+type StoreOpenProps = {
   t: TFunction
   open: boolean
 }
 
-const StoreOpen: React.FC<StoreOpenProps> = ({ t, open }) => (
+const StoreOpen = ({ t, open }: StoreOpenProps) => (
   <div className={`text-${getFlagVariant(open)}`}>
     <Icon className="mr-1" type={`door-${open ? 'open' : 'closed'}`} />
     <small>{t('open', { returnObjects: true })[+open]}</small>

@@ -6,11 +6,11 @@ import Heading from '../../components/Heading'
 import Footer from '../../components/Footer'
 import Icon from '../../components/Icon'
 
-interface ErrorBoundaryProps {
+type ErrorBoundaryProps = {
   t: TFunction
 }
 
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ t }) => (
+const ErrorBoundary = ({ t }: ErrorBoundaryProps) => (
   <div>
     <div className="page-container">
       <Stack className="text-center" gap={5}>

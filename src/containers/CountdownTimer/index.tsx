@@ -4,11 +4,11 @@ import { setResetTimer } from '../../reducers/storeMap'
 import { useGetStoreListQuerySubscription } from '../../service/api/store'
 import formatTime from '../../utils/formatTime'
 
-interface CountdownTimerProps {
+type CountdownTimerProps = {
   duration?: number
 }
 
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ duration = 60 }) => {
+const CountdownTimer = ({ duration = 60 }: CountdownTimerProps) => {
   const [timer, setTimer] = useState(duration)
   const { resetTimer } = useSelector((state: StoreState) => state.storeMap)
   const dispatch = useDispatch()

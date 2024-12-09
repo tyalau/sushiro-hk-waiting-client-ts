@@ -15,11 +15,11 @@ import { getTier, getDisplayTime, getCenter, getBounds } from '../../service/map
 import MapFilter from './MapFilter'
 import StoreInfo from '../StoreInfo'
 
-interface MapContainerProps {
+type MapContainerProps = {
   t: TFunction
 }
 
-const MapContainer: React.FC<MapContainerProps> = ({ t }) => {
+const MapContainer = ({ t }: MapContainerProps) => {
   const { isSuccess, isError, data, isFetching, status } = useGetStoreListQuery()
   const { refetch } = useGetStoreListQuerySubscription()
   const dispatch = useDispatch()

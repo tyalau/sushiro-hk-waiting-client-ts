@@ -4,13 +4,13 @@ import Icon from '../../components/Icon'
 
 import { getTierVariant, getFlagVariant } from '../../service/map'
 
-interface WaitingGroupProps {
+type WaitingGroupProps = {
   t: TFunction
   waitingGroup: number
   open: boolean
 }
 
-const WaitingGroup: React.FC<WaitingGroupProps> = ({ t, waitingGroup, open }) => (
+const WaitingGroup = ({ t, waitingGroup, open }: WaitingGroupProps) => (
   <div className={`text-${open ? getTierVariant(waitingGroup) : getFlagVariant(open)}`}>
     <div className="info-title">{t('waitingGroup')}</div>
     <div>

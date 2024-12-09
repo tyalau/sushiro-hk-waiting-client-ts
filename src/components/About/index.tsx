@@ -3,11 +3,11 @@ import { withTranslation, TFunction } from 'react-i18next'
 import Stack from 'react-bootstrap/Stack'
 import Heading from '../Heading'
 
-interface AboutProps {
+type AboutProps = {
   t: TFunction
 }
 
-const About: React.FC<AboutProps> = ({ t }) => {
+const About = ({ t }: AboutProps) => {
   const disclaimers = t('about.disclaimer', { returnObjects: true }) as string[]
   return (
     <div className="page-container">

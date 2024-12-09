@@ -5,11 +5,11 @@ import config from '../../config'
 import Heading from '../../components/Heading'
 import Footer from '../../components/Footer'
 
-interface DisclaimerProps {
+type DisclaimerProps = {
   t: TFunction
 }
 
-const Disclaimer: React.FC<DisclaimerProps> = ({ t }) => (
+const Disclaimer = ({ t }: DisclaimerProps) => (
   <div>
     <div className="page-container">
       <Stack>
